@@ -25,6 +25,6 @@ echo 'Password: '.Config::get('db/password').'<br />';
 echo 'Database: '.Config::get('db/name').'<br />';
 ```
 
-Note that it is recommended to put all your configuration files outside the web root
-when possible. Say, your web root is /var/www/public_html. Then you could put your config
-files in /var/www/ or even /var/www/config/.
+*Note that it is recommended to put all your configuration files outside the web root
+when possible. Say, your web root is /var/www/public_html/. Then you could put your config
+files in /var/www/ or even /var/www/config/.*
