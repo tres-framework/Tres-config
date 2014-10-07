@@ -43,7 +43,7 @@ namespace packages\Tres\config {
         private function __clone(){}
         
         /**
-         * Checks PHP version.
+         * Checks the PHP version.
          */
         protected static function _checkPHPVersion(){
             if(!version_compare(PHP_VERSION, self::MIN_PHP_VERSION, '>=')){
