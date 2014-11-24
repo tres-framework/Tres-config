@@ -1,6 +1,7 @@
 <?php
 
 use Tres\config\Config;
+use Tres\config\PackageInfo;
 
 error_reporting(-1);
 ini_set('display_errors', 1);
@@ -53,7 +54,7 @@ Config::add('config 2', 'config/config2.php');
             echo '<br /><br />';
             print_r(Config::get('config 2'));
             echo '<br /><br />';
-            print_r(Config::getPackageInfo());
+            print_r(PackageInfo::get());
         echo '</pre>'
         ?>
     </body>

@@ -104,22 +104,6 @@ namespace Tres\config {
             return $value;
         }
         
-        /**
-         * Gives information about this package.
-         * 
-         * @return array
-         */
-        final public static function getPackageInfo(){
-            return [
-                'version' => '1.0',
-                'authors' => [
-                    'pedzed' => [
-                        'profile' => 'https://github.com/pedzed/'
-                    ]
-                ]
-            ];
-        }
-        
     }
     
 }
