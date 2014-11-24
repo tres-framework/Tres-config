@@ -1,6 +1,6 @@
 <?php
 
-use packages\Tres\config\Config;
+use Tres\config\Config;
 
 error_reporting(-1);
 ini_set('display_errors', 1);
