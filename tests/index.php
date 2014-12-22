@@ -7,16 +7,16 @@ error_reporting(-1);
 ini_set('display_errors', 1);
 
 spl_autoload_register(function($class){
-    $file = dirname(__DIR__).'/'.str_replace('\\', '/', $class.'.php');
+    $dirs = [
+        dirname(__DIR__).'/src/'
+    ];
     
-    
-    if(file_exists($file)){
-        require_once($file);
-    } else {
-        if(!is_readable($file)){
-            die($file.' is not readable.');
-        } else {
-            die($file.' does not exist.');
+    foreach($dirs as $dir){
+        $file = str_replace('\\', '/', rtrim($dir, '/').'/'.$class.'.php');
+        
+        if(is_readable($file)){
+            require_once($file);
+            break;
         }
     }
 });
