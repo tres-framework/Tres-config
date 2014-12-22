@@ -4,7 +4,6 @@ namespace Tres\config {
     
     use Exception;
     
-    class PackageException extends Exception {}
     class ConfigException extends Exception {}
     
     /**
@@ -13,11 +12,6 @@ namespace Tres\config {
      * Gets the configuration from a certain file.
      */
     class Config {
-        
-        /**
-         * The minimum required PHP version.
-         */
-        const MIN_PHP_VERSION = 5.4;
         
         /**
          * The path delimiter.
@@ -43,15 +37,6 @@ namespace Tres\config {
         private function __clone(){}
         
         /**
-         * Checks the PHP version.
-         */
-        protected static function _checkPHPVersion(){
-            if(!version_compare(PHP_VERSION, self::MIN_PHP_VERSION, '>=')){
-                throw new PackageException('PHP version must be greater than '.self::MIN_PHP_VERSION.'.');
-            }
-        }
-        
-        /**
          * Adds a configuration set to the list of configurations.
          * 
          * @param string $alias An alias for the configuration.
@@ -69,8 +54,6 @@ namespace Tres\config {
          *                      On failure: null.
          */
         public static function get($path){
-            self::_checkPHPVersion();
-            
             $path = trim($path, self::DELIMITER);
             $configName = explode(self::DELIMITER, $path)[0];
             $value = null;

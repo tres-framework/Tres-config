@@ -13,7 +13,7 @@ namespace Tres\config {
          * @var array
          */
         protected static $_info = [
-            'version' => '2.0',
+            'version' => '2.1',
             'website' => 'http://tresframework.com/',
             
             'contributors' => [
