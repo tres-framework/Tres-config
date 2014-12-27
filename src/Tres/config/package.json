@@ -1,0 +1,25 @@
+{
+    "name": "Tres config manager",
+    "version": "2.1.1",
+    "website": "http://tresframework.com",
+    "documentation": "",
+    "description_short": "Manages the configurations for your application.",
+    
+    "description_long": [
+        "This is the config management package used for Tres Framework. This ",
+        "is a stand-alone package, which means that it can also be used ",
+        "without the framework.\n\n"
+    ],
+    
+    "dependencies": {
+        "php": ">= 5.4"
+    },
+    
+    "contributors": [{
+        "name": "Ped Zed",
+        "nickname": "pedzed",
+        "role": "creator, maintainer",
+        "email": "ped@tresframework.com",
+        "github": "https://github.com/pedzed/"
+    }]
+}
