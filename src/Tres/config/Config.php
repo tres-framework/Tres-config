@@ -6,11 +6,15 @@ namespace Tres\config {
     
     class ConfigException extends Exception {}
     
-    /**
-     * Configuration class.
-     * 
-     * Gets the configuration from a certain file.
-     */
+    /*
+    |-------------------------------------------------------------------------
+    | Configuration management
+    |-------------------------------------------------------------------------
+    | 
+    | This class gives the option to get some configurations and make it 
+    | accessible throughout the application.
+    | 
+    */
     class Config {
         
         /**
@@ -32,7 +36,7 @@ namespace Tres\config {
          */
         protected static $_paths = [];
         
-        // Prevent instantiation
+        // Prevents instantiation.
         private function __construct(){}
         private function __clone(){}
         
